@@ -22,7 +22,7 @@ import servicio.FabricaPersonas;
 import servicio.ProcesadorPacientes;
 import servicio.SistemaSalud;
 
-public class V1 extends JFrame {
+public class V1	 extends JFrame {
     private SistemaSalud sistema = SistemaSalud.getInstancia();
 
     // Pestaña pacientes
