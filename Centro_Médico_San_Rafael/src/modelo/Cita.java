@@ -1,15 +1,15 @@
-package Modelo;
+package modelo;
 
-public class cita {
+public class Cita {
     private String codigo;
-    private paciente paciente;
-    private medico medico;
+    private Paciente paciente;
+    private Medico medico;
     private String fecha;
     private String hora;
     private String motivo;
 
-    public cita(String codigo, paciente paciente, medico medico, String fecha, 
-    		String hora, String motivo){
+    public Cita(String codigo, Paciente paciente, Medico medico, String fecha,
+                String hora, String motivo) {
         this.codigo = codigo;
         this.paciente = paciente;
         this.medico = medico;
@@ -19,8 +19,8 @@ public class cita {
     }
 
     public String getCodigo() { return codigo; }
-    public paciente getPaciente() { return paciente; }
-    public medico getMedico() { return medico; }
+    public Paciente getPaciente() { return paciente; }
+    public Medico getMedico() { return medico; }
     public String getFecha() { return fecha; }
     public String getHora() { return hora; }
     public String getMotivo() { return motivo; }
@@ -29,3 +29,4 @@ public class cita {
         return fecha + " " + hora + " | " + medico.getNombre() + " | " + motivo;
     }
 }
+
