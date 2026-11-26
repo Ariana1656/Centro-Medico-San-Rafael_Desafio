@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 
+import javax.swing.UIManager;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -27,10 +28,11 @@ import servicio.ProcesadorPacientes;
 import servicio.SistemaSalud;
 import servicio.Validador;
 
+
 public class V1 extends JFrame {
     private SistemaSalud sistema = SistemaSalud.getInstancia();
 
-    // Pestaña pacientes
+ // Pestaña pacientes
     private JTextField txtCodigo = new JTextField(8);
     private JTextField txtDni = new JTextField(8);
     private JTextField txtNombre = new JTextField(10);
@@ -772,8 +774,14 @@ public class V1 extends JFrame {
                 + ProcesadorPacientes.sumarEdades(pacientes) + "\n");
     }
 
-    // ---------- Inicio del programa ----------
+ // ---------- Inicio del programa ----------
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         SistemaSalud sistema = SistemaSalud.getInstancia();
 
         Especialidad general = new Especialidad("Medicina General");
@@ -789,6 +797,7 @@ public class V1 extends JFrame {
 
         new V1().setVisible(true);
     }
-}
+    }
+
 
 
