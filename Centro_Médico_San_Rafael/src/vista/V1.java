@@ -32,16 +32,7 @@ import servicio.Validador;
 public class V1 extends JFrame {
     private SistemaSalud sistema = SistemaSalud.getInstancia();
 
-    // Pestaña pacientes
-    private JTextField txtCodigo = new JTextField(8);
-    private JTextField txtDni = new JTextField(8);
-    private JTextField txtNombre = new JTextField(10);
-    private JTextField txtEdad = new JTextField(4);
-    private JTextField txtTelefono = new JTextField(9);
-    private JTextField txtBuscar = new JTextField(10);
-    private DefaultTableModel modeloPacientes = new DefaultTableModel(
-            new String[]{"Código", "DNI", "Nombre", "Edad", "Teléfono"}, 0);
-    private JTable tablaPacientes = new JTable(modeloPacientes);
+    
 
     // Pestaña médicos
     private JTextField txtCodigoMedico = new JTextField(8);
